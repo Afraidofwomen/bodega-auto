@@ -1,0 +1,333 @@
+.root {
+    -fx-font-family: "Inter", "Roboto", "Noto Sans", "Segoe UI", sans-serif;
+    -fx-font-size: 14px;
+}
+
+.theme-dark {
+    -bg: #121212;
+    -surface: #1e1e1e;
+    -text: #e0e0e0;
+    -muted: #9aa0a6;
+    -line: #2c2c2c;
+    -nav: #161616;
+}
+
+.theme-light {
+    -bg: #f8f9fa;
+    -surface: #ffffff;
+    -text: #212529;
+    -muted: #4a5568;
+    -line: #e6e8eb;
+    -nav: #ffffff;
+}
+
+.theme-dark, .theme-light {
+    -primary: #0052cc;
+    -secondary: #4a5568;
+    -ok: #22c55e;
+    -warn: #eab308;
+    -err: #ef4444;
+    -process: #3b82f6;
+}
+
+.shell {
+    -fx-background-color: -bg;
+}
+
+.nav {
+    -fx-background-color: -nav;
+    -fx-padding: 20 14 20 14;
+    -fx-pref-width: 196;
+    -fx-border-color: -line;
+    -fx-border-width: 0 1 0 0;
+}
+
+.brand {
+    -fx-text-fill: -primary;
+    -fx-font-size: 24px;
+    -fx-font-weight: 700;
+}
+
+.brand-sub {
+    -fx-text-fill: -muted;
+    -fx-font-size: 12px;
+    -fx-font-weight: 500;
+    -fx-padding: 0 0 18 0;
+}
+
+.nav-btn {
+    -fx-background-color: transparent;
+    -fx-text-fill: -text;
+    -fx-alignment: CENTER_LEFT;
+    -fx-padding: 0 14;
+    -fx-background-radius: 8;
+    -fx-cursor: hand;
+    -fx-font-size: 14px;
+    -fx-font-weight: 500;
+}
+
+.nav-btn:hover {
+    -fx-background-color: -primary;
+    -fx-text-fill: white;
+}
+
+.topbar {
+    -fx-background-color: -surface;
+    -fx-padding: 10 18;
+    -fx-border-color: -line;
+    -fx-border-width: 0 0 1 0;
+}
+
+.pages, .page {
+    -fx-background-color: -bg;
+    -fx-padding: 18 22;
+}
+
+.page-title {
+    -fx-text-fill: -text;
+    -fx-font-size: 24px;
+    -fx-font-weight: 700;
+}
+
+.page-subtitle {
+    -fx-text-fill: -muted;
+    -fx-font-size: 12px;
+    -fx-font-weight: 500;
+    -fx-padding: 0 0 4 0;
+}
+
+.card {
+    -fx-background-color: -surface;
+    -fx-background-radius: 10;
+    -fx-padding: 14 16;
+    -fx-border-color: -line;
+    -fx-border-radius: 10;
+}
+
+.card-title {
+    -fx-text-fill: -muted;
+    -fx-font-size: 16px;
+    -fx-font-weight: 500;
+}
+
+.kpi-value {
+    -fx-text-fill: -text;
+    -fx-font-size: 28px;
+    -fx-font-weight: 700;
+    -fx-font-family: "JetBrains Mono", "Roboto Mono", "Ubuntu Mono", "Consolas", monospace;
+}
+
+.tone-ok { -fx-text-fill: -ok; }
+.tone-warn { -fx-text-fill: -warn; }
+.tone-err { -fx-text-fill: -err; }
+.tone-process { -fx-text-fill: -process; }
+
+.micro {
+    -fx-text-fill: -muted;
+    -fx-font-size: 12px;
+    -fx-font-weight: 500;
+}
+
+.mono-num, .mono-block {
+    -fx-font-family: "JetBrains Mono", "Roboto Mono", "Ubuntu Mono", "Consolas", monospace;
+    -fx-font-size: 13px;
+    -fx-text-fill: -text;
+}
+
+.mono-block {
+    -fx-padding: 12;
+    -fx-background-color: -surface;
+    -fx-background-radius: 8;
+}
+
+.status-badge {
+    -fx-padding: 4 10;
+    -fx-background-radius: 999;
+    -fx-font-size: 12px;
+    -fx-font-weight: 700;
+    -fx-font-family: "JetBrains Mono", "Roboto Mono", "Ubuntu Mono", monospace;
+    -fx-text-fill: white;
+    -fx-background-color: -secondary;
+}
+
+.state-idle { -fx-background-color: -ok; }
+.state-moving, .state-picking, .state-placing, .state-homing { -fx-background-color: -process; }
+.state-fault { -fx-background-color: -err; }
+.state-unknown { -fx-background-color: -secondary; }
+
+.connection-indicator { -fx-padding: 2 0; }
+.conn-label { -fx-text-fill: -text; -fx-font-size: 12px; -fx-font-weight: 500; }
+.conn-dot {
+    -fx-min-width: 10;
+    -fx-min-height: 10;
+    -fx-pref-width: 10;
+    -fx-pref-height: 10;
+    -fx-background-radius: 999;
+}
+.conn-online { -fx-background-color: -ok; }
+.conn-offline { -fx-background-color: -err; }
+.conn-connecting { -fx-background-color: -warn; }
+.conn-degraded { -fx-background-color: -warn; }
+
+.theme-toggle {
+    -fx-background-color: transparent;
+    -fx-border-color: -line;
+    -fx-border-radius: 8;
+    -fx-text-fill: -text;
+    -fx-padding: 6 12;
+    -fx-cursor: hand;
+}
+
+.alert-scroll {
+    -fx-background-color: transparent;
+    -fx-padding: 8 0 0 0;
+    -fx-pref-height: 280;
+}
+.alert-scroll .viewport { -fx-background-color: transparent; }
+.alert-list { -fx-padding: 2 2 8 0; }
+.alert-row {
+    -fx-padding: 8 10;
+    -fx-background-radius: 8;
+    -fx-background-color: derive(-surface, 8%);
+}
+.alert-title { -fx-text-fill: -text; -fx-font-weight: 500; }
+.alert-success { -fx-border-color: -ok; -fx-border-width: 0 0 0 3; }
+.alert-error { -fx-border-color: -err; -fx-border-width: 0 0 0 3; }
+.alert-warning { -fx-border-color: -warn; -fx-border-width: 0 0 0 3; }
+.alert-process { -fx-border-color: -process; -fx-border-width: 0 0 0 3; }
+.alert-info { -fx-border-color: -secondary; -fx-border-width: 0 0 0 3; }
+
+.occupancy-chart {
+    -fx-pref-height: 280;
+    -fx-background-color: transparent;
+}
+.occupancy-chart .chart-plot-background { -fx-background-color: transparent; }
+.occupancy-chart .chart-title { -fx-text-fill: -text; -fx-font-size: 16px; }
+.occupancy-chart .axis { -fx-tick-label-fill: -muted; }
+.occupancy-chart .chart-bar { -fx-bar-fill: -primary; }
+.occupancy-chart .chart-vertical-grid-lines, .occupancy-chart .chart-horizontal-grid-lines {
+    -fx-stroke: -line;
+}
+
+.telemetry-pos {
+    -fx-font-size: 18px;
+    -fx-text-fill: -text;
+}
+.telemetry-sensors { -fx-text-fill: -muted; }
+
+.slot-cell, .io-station {
+    -fx-background-radius: 8;
+    -fx-padding: 8;
+    -fx-alignment: CENTER;
+    -fx-cursor: hand;
+    -fx-border-radius: 8;
+}
+.slot-empty { -fx-background-color: rgba(34, 197, 94, 0.28); }
+.slot-full { -fx-background-color: rgba(239, 68, 68, 0.38); }
+.slot-selected {
+    -fx-border-color: -primary;
+    -fx-border-width: 2;
+}
+.slot-id {
+    -fx-font-size: 14px;
+    -fx-font-weight: 700;
+    -fx-text-fill: -text;
+}
+.slot-sku {
+    -fx-font-size: 11px;
+    -fx-text-fill: -muted;
+}
+.rack-title {
+    -fx-text-fill: -muted;
+    -fx-font-size: 12px;
+    -fx-font-weight: 500;
+}
+.aisle {
+    -fx-background-color: derive(-primary, 70%);
+    -fx-background-radius: 6;
+    -fx-min-height: 36;
+    -fx-padding: 6 10;
+}
+.theme-dark .aisle { -fx-background-color: #1a2a44; }
+.crane-marker {
+    -fx-text-fill: -process;
+    -fx-font-family: "JetBrains Mono", "Roboto Mono", monospace;
+    -fx-font-size: 12px;
+    -fx-font-weight: 700;
+}
+.selected-slot-info {
+    -fx-text-fill: -text;
+    -fx-font-weight: 500;
+}
+
+.chip {
+    -fx-background-color: -surface;
+    -fx-text-fill: -text;
+    -fx-border-color: -line;
+    -fx-border-radius: 999;
+    -fx-background-radius: 999;
+    -fx-padding: 6 14;
+    -fx-cursor: hand;
+    -fx-font-size: 12px;
+    -fx-font-weight: 500;
+}
+.chip:selected {
+    -fx-background-color: -primary;
+    -fx-text-fill: white;
+    -fx-border-color: -primary;
+}
+
+.pick-card { -fx-min-height: 220; }
+.pick-location {
+    -fx-font-size: 42px;
+    -fx-font-weight: 700;
+    -fx-font-family: "JetBrains Mono", "Roboto Mono", monospace;
+    -fx-text-fill: -text;
+}
+.pick-human { -fx-text-fill: -muted; -fx-font-size: 16px; }
+.pick-sku { -fx-text-fill: -process; -fx-font-size: 18px; }
+.pick-qty { -fx-text-fill: -text; -fx-font-size: 14px; -fx-font-weight: 500; }
+
+.giant-btn {
+    -fx-font-size: 15px;
+    -fx-font-weight: 700;
+    -fx-background-radius: 10;
+    -fx-cursor: hand;
+    -fx-min-height: 52;
+}
+.btn-primary { -fx-background-color: -primary; -fx-text-fill: white; }
+.btn-process { -fx-background-color: -process; -fx-text-fill: white; }
+.btn-danger { -fx-background-color: -err; -fx-text-fill: white; }
+.btn-ghost {
+    -fx-background-color: -surface;
+    -fx-text-fill: -text;
+    -fx-border-color: -line;
+    -fx-border-radius: 10;
+}
+.giant-field {
+    -fx-background-color: -surface;
+    -fx-text-fill: -text;
+    -fx-prompt-text-fill: -muted;
+    -fx-background-radius: 8;
+    -fx-border-color: -line;
+    -fx-border-radius: 8;
+    -fx-padding: 10 12;
+    -fx-font-size: 14px;
+}
+.form-label { -fx-text-fill: -muted; -fx-font-size: 12px; -fx-font-weight: 500; }
+.feedback { -fx-text-fill: -text; -fx-font-weight: 500; }
+
+.flash-overlay { -fx-opacity: 0.22; }
+.flash-ok { -fx-background-color: -ok; }
+.flash-err { -fx-background-color: -err; }
+
+.estop-active .topbar {
+    -fx-background-color: derive(-err, -40%);
+}
+
+.combo-box, .combo-box .list-cell {
+    -fx-background-color: -surface;
+    -fx-text-fill: -text;
+}
+.scroll-pane { -fx-background-color: transparent; }
+.scroll-bar:vertical .thumb { -fx-background-color: -line; }
