@@ -1,0 +1,18 @@
+WMS — proyecto para NetBeans (JFrame / Swing)
+==============================================
+
+Requisito: JDK 17 o superior (NetBeans 12, 17, 21 o 25).
+
+Cómo abrirlo
+------------
+1. En NetBeans: Archivo → Abrir proyecto…
+2. Elige esta carpeta: wms-netbeans
+3. Pulsa el botón verde Run (F6)
+
+Clase principal: com.bodega.wms.WmsSwingApp
+(también puedes clic derecho en WmsFrame.java → Run File)
+
+Arranca en simulador. Para el ESP32: menú Conexión → MQTT.
+
+Si NetBeans avisa que debe regenerar build-impl.xml, acepta.
+Si no reconoce el JDK: Herramientas → Java Platforms → agregar JDK 17+.

@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns:j2seproject1="http://www.netbeans.org/ns/j2se-project/1"
+         xmlns:j2seproject3="http://www.netbeans.org/ns/j2se-project/3"
+         name="WMS-BodegaAutomatica-impl" basedir="..">
+    <target name="default" depends="jar" description="Build JAR"/>
+    <target name="deps-jar"/>
+    <target name="-pre-init"/>
+    <target name="-init-private">
+        <property file="nbproject/private/private.properties"/>
+    </target>
+    <target name="-init-project" depends="-pre-init,-init-private">
+        <property file="nbproject/project.properties"/>
+        <mkdir dir="${build.classes.dir}"/>
+        <mkdir dir="${dist.dir}"/>
+    </target>
+    <target name="init" depends="-init-project"/>
+    <target name="-pre-compile"/>
+    <target name="compile" depends="init,-pre-compile" description="Compilar">
+        <javac srcdir="${src.dir}"
+               destdir="${build.classes.dir}"
+               includeantruntime="false"
+               encoding="${source.encoding}"
+               debug="true"
+               release="${javac.release}"
+               classpath="${javac.classpath}"
+               excludes="${excludes}"
+               includes="${includes}"/>
+        <copy todir="${build.classes.dir}">
+            <fileset dir="${src.dir}" excludes="**/*.java"/>
+        </copy>
+    </target>
+    <target name="-post-compile"/>
+    <target name="jar" depends="compile,-post-compile" description="JAR">
+        <jar destfile="${dist.jar}">
+            <manifest>
+                <attribute name="Main-Class" value="${main.class}"/>
+            </manifest>
+            <fileset dir="${build.classes.dir}"/>
+        </jar>
+    </target>
+    <target name="run" depends="compile" description="Ejecutar JFrame">
+        <java classname="${main.class}" classpath="${run.classpath}" fork="true"/>
+    </target>
+    <target name="debug" depends="compile"/>
+    <target name="javadoc" depends="init"/>
+    <target name="clean" description="Limpiar">
+        <delete dir="${build.dir}"/>
+        <delete dir="${dist.dir}"/>
+    </target>
+    <target name="test"/>
+    <target name="compile-test" depends="compile"/>
+    <target name="run-test"/>
+    <target name="debug-test"/>
+    <target name="profile"/>
+    <target name="profile-test"/>
+</project>
